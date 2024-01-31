@@ -8,7 +8,7 @@ class App extends Component {
     this.trackEvent = this.trackEvent.bind();
   }
   trackEvent() {
-    window.Moengage.track_event("Sample", { integration: "React" });
+    window.Moengage.track_event("Button Clicked Event stored", { integration: "React" });
   }
   render() {
     return (
