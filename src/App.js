@@ -112,7 +112,7 @@ function App() {
       <ToastContainer />
       <div className="App-header">
         <h1>Moenage</h1>
-        <h2>Welcome to Sample Moenage Web SDK APP</h2>
+        <h2>Welcome to Sample Moenage Web SDK APP 1 </h2>
       </div>
       <p className="App-intro">
         To get started Read{" "}
