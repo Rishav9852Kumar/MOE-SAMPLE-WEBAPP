@@ -19,6 +19,7 @@ function App() {
     attributeType: "string",
     attributeValue: "",
   });
+  const [uid, setUid] = useState({ id: "" });
 
   const trackButtonClickedEvent = () => {
     console.log("Button Clicked Event made");
@@ -48,6 +49,12 @@ function App() {
       [e.target.name]: e.target.value,
     });
   };
+  const handleIdChange = (e) => {
+    setUid({
+      ...uid,
+      [e.target.name]: e.target.value,
+    });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     window.Moengage.add_first_name(formInput.firstname);
@@ -58,6 +65,13 @@ function App() {
     window.Moengage.add_gender(formInput.gender);
     window.Moengage.add_birthday(new Date(formInput.birthday));
     trackUserDeatilsUpdateEvent();
+  };
+  const handleUidSubmit = (e) => {
+    e.preventDefault();
+    // Moengage Adding Unique User Id
+    console.log("User logging : " + uid.id);
+    window.Moengage.add_unique_user_id(uid.id); // UNIQUE_ID is used to uniquely
+    toast.success("User logged in : " + uid.id);
   };
   const handleCustomAttributeSubmit = (e) => {
     e.preventDefault();
@@ -138,6 +152,16 @@ function App() {
       <button className="App-button" onClick={trackButtonClickedEvent}>
         Track Sample Event
       </button>
+      <form className="Custom-Attribute-Form" onSubmit={handleUidSubmit}>
+        <input
+          name="id"
+          value={uid.id}
+          onChange={handleIdChange}
+          required
+          placeholder="User ID"
+        />
+        <button type="submit">Login </button>
+      </form>
       <form className="App-form" onSubmit={handleSubmit}>
         <input
           name="firstname"
