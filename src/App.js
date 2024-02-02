@@ -75,6 +75,7 @@ function App() {
     // Moengage Adding Unique User Id
     console.log("User logging : " + uid.id);
     window.Moengage.add_unique_user_id(uid.id); // UNIQUE_ID is used to uniquely
+    window.Moengage.call_web_push();
     toast.success("User logged in : " + uid.id);
   };
   const handleCustomAttributeSubmit = (e) => {
