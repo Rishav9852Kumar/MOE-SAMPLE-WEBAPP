@@ -28,7 +28,11 @@ function App() {
     });
     toast.success("Button Clicked Event made");
   };
-
+  const handleLogOut = () => {
+    console.log("Logout Button Clicked ");
+    window.Moengage.destroy_session();
+    toast.warning("Log Out Successfull");
+  };
   const trackUserDeatilsUpdateEvent = () => {
     console.log("User deatils updated");
     window.Moengage.track_event("User deatils updated", {
@@ -152,16 +156,21 @@ function App() {
       <button className="App-button" onClick={trackButtonClickedEvent}>
         Track Sample Event
       </button>
-      <form className="Custom-Attribute-Form" onSubmit={handleUidSubmit}>
-        <input
-          name="id"
-          value={uid.id}
-          onChange={handleIdChange}
-          required
-          placeholder="User ID"
-        />
-        <button type="submit">Login </button>
-      </form>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <form className="Custom-Attribute-Form" onSubmit={handleUidSubmit}>
+          <input
+            name="id"
+            value={uid.id}
+            onChange={handleIdChange}
+            required
+            placeholder="User ID"
+          />
+          <button type="submit">Log In </button>
+        </form>
+        <button className="LogOut-button" onClick={handleLogOut}>
+          Log Out
+        </button>
+      </div>
       <form className="App-form" onSubmit={handleSubmit}>
         <input
           name="firstname"
