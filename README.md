@@ -1,4 +1,4 @@
-# Getting Started with Moenage Integration
+# Getting Started with Moenage Integration [Live Deployed App](https://rishav-moengage-sample.netlify.app/)
 
 This project showcases the integration of [React App](https://github.com/facebook/create-react-app) with [Moengage](https://www.moengage.com/).
 
