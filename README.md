@@ -8,7 +8,7 @@ In the project directory, you have:
 
 ### `Track Button Clicked Event`
 Tracks any button-click event in the app and integrates with Moengage SDK to store this event. You can see a successful event tracking via a toast message.
-
+![alt text](./logo192.png)
 ### `User-Details Update Event`
 Logs the updating of user details. A toast message will let you know when user details have successfully been updated.
 
