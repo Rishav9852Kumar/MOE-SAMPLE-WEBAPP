@@ -115,6 +115,10 @@
       Moengage = moe({
         app_id: moeAppID,
         debug_logs: 0,
+        cards: {
+          enable: true,
+          placeholder: ".Notifications", // CSS selector of inbox icon
+        },
       });
 
       Moengage.add_email("test");

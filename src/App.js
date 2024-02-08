@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MdNotificationsActive } from "react-icons/md";
 import "./App.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -130,7 +131,9 @@ function App() {
     <div className="App">
       <ToastContainer />
       <div className="App-header">
-        <h1>Moenage</h1>
+        <h1>
+          Moenage <MdNotificationsActive className="Notifications" />
+        </h1>
         <h2>Welcome to Sample Moenage Web SDK APP 1 </h2>
       </div>
       <p className="App-intro">
