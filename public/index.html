@@ -111,13 +111,85 @@
           "/moe_webSdk.min.latest.js",
         "Moengage"
       );
-
+      // CSS for Cards
       Moengage = moe({
         app_id: moeAppID,
         debug_logs: 0,
         cards: {
           enable: true,
           placeholder: ".Notifications", // CSS selector of inbox icon
+          backgroundColor: "#e6ffff", // any valid CSS color format
+          overLayColor: "rgba(152, 205, 205, 0.8)",
+          fontFaces: [
+            {
+              family: "Sofia",
+              url: "https://fonts.gstatic.com/s/sofia/v14/8QIHdirahM3j_su5uI0Orbjl.woff2",
+            },
+            {
+              family: "Audiowide",
+              url: "https://fonts.gstatic.com/s/audiowide/v16/l7gdbjpo0cum0ckerWCdlg_OMRlABg.woff2",
+            },
+          ],
+          cardDismiss: {
+            color: "#db2828", // any valid CSS color format
+            enable: false, // boolean value, which enable the dismiss option.
+          },
+          optionButtonColor: "#C4C4C4", // any valid CSS color format
+          dateTimeColor: "#8E8E8E", // any valid CSS color format
+          unclickedCardIndicatorColor: "blue", // any valid CSS color format
+          pinIcon: "https://app-cdn.moengage.com/sdk/pin-icon.svg", // absolute path to the icon image.
+          refreshIcon: "https://app-cdn.moengage.com/sdk/refresh-icon.svg", // absolute path to the icon image.
+          navigationBar: {
+            backgroundColor: "#003333", // any valid CSS color format
+            text: "Notifications", // string. eg, Notifications
+            color: "#fff", // any valid CSS color format
+            fontSize: "16px", // any valid CSS size format
+            fontFamily: "", // any font family which is added to the website
+          },
+          closeButton: {
+            webIcon: "https://app-cdn.moengage.com/sdk/cross-icon.svg",
+            mWebIcon: "https://app-cdn.moengage.com/sdk/cross-icon.svg",
+          },
+          tab: {
+            active: {
+              color: "#06A6B7",
+              underlineColor: "#06A6B7",
+              backgroundColor: "transparent",
+            },
+            inactiveTabFontColor: "#7C7C7C",
+            fontSize: "14px", // any valid CSS size format
+            fontFamily: "", // any font family which is added to the website
+            backgroundColor: "#fff", // any valid CSS color format
+          },
+          webFloating: {
+            enable: false, // false by default
+            icon: "https://app-cdn.moengage.com/sdk/bell-icon.svg", // absolute path to the icon image. by default, our icon will be used.
+            postion: "0px 10px 40px 0", // need all 4 offset in proper CSS format in the order of top, right, bottom, left.
+            countBackgroundColor: "#FF5A5F",
+            countColor: "#fff",
+            iconBackgroundColor: "#D9DFED",
+            fontFamily: "Audiowide",
+          },
+          mWebFloating: {
+            enable: false, // false by default
+            icon: "https://app-cdn.moengage.com/sdk/bell-icon.svg", // absolute path to the icon image. by default, our icon will be used.
+            postion: "0px 10px 40px 0", // need all 4 offset in proper CSS format in the order of top, right, bottom, left.
+            countBackgroundColor: "#FF5A5F",
+            countColor: "#fff",
+            iconBackgroundColor: "#D9DFED",
+            fontFamily: "Audiowide",
+          },
+          card: {
+            headerFontSize: "16px",
+            descriptionFontSize: "14px",
+            ctaFontSize: "12px",
+            fontFamily: "inherit",
+            horizontalRowColor: "yellow",
+          },
+          noDataContent: {
+            img: "https://app-cdn.moengage.com/sdk/cards-no-result.svg",
+            text: "No notifications to show, check again later.",
+          },
         },
       });
 
